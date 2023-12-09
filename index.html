@@ -14,6 +14,34 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+  <style>
+  /* Chat Button Styles */
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00f;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Cbox Styles */
+  #cbox {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+  }
+</style>
   <body>
     <main>
       <header id="header">
@@ -43,7 +71,6 @@
             <div class="logo">
               <img src="./img/logo.png" alt="" />
             </div>
-
             <div class="links">
               <ul>
                 <li>
@@ -69,13 +96,12 @@
                 </li>
               </ul>
             </div>
-
+            
             <div class="hamburger-menu">
               <div class="bar"></div>
             </div>
           </div>
-        </nav>
-
+        </nav>      
         <div class="header-content">
           <div class="container grid-2">
             <div class="column-1">
@@ -97,7 +123,15 @@
           </div>
         </div>
       </header>
+               <!-- Chat Button -->
+       <div id="chat-button" class="chat-button">
+       <i class="fas fa-comment"></i>
+       </div>
 
+      <!-- Cbox -->
+     <div id="cbox" class="cbox">
+     <iframe src="https://my.cbox.ws/LannApii" width="100%" height="300" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+      </div>
       <section class="services section" id="services">
         <div class="container">
           <div class="section-header">
@@ -113,9 +147,9 @@
                   <img src="./img/riyo.png" class="icon" alt="" />
                   <h3 class="title-sm">Ryo Yamada</h3>
                   <p class="text">
-                    Ryo merupakan bot WhatsApp yang saya kembangkan pada tanggal 4 November 2023. Untuk fiturnya kalian bisa check di <a href="https://youtu.be/trPOi1D0V8Y?si=tDwATaezgO0K-Doz">yt</href>  gw.
+                    Ryo merupakan bot WhatsApp yang saya kembangkan pada tanggal 4 November 2023. Untuk fiturnya kalian bisa check di <a href="https://youtu.be/cf_eiKvsPGI?si=qkli-9e-Wa97jMzl">yt</href>  gw.
                   </p>
-                  <a href="https://tutwuri.id/xd4Ckm2" class="btn small">Download</a>
+                  <a href="https://www.mediafire.com/file/pk0hyt5jrgzlbq8/Ryoo+vresi+1.1.zip/file" class="btn small">Download</a>
                 </div>
               </div>
             </div>
@@ -135,7 +169,7 @@
                     Rimuru merupakan bot WhatsApp yang saya kembangkan pada tanggal 25 Oktober 2023. Untuk fiturnya kalian bisa check di <a href="https://youtube.com/@taaofc">yt</href>  gw.
                   </p>
                   <br>
-                  <a href="https://www.mediafire.com/file/j4qoy2p9n1t36ud/Rimuwru.zip/file" class="btn small">Download</a>
+                  <a href="#" class="btn small">Download</a>
                 </div>
               </div>
             </div>
@@ -430,5 +464,12 @@
     <script src="./js/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+  // JavaScript to handle chat button interaction
+  document.getElementById('chat-button').addEventListener('click', function () {
+    var cbox = document.getElementById('cbox');
+    cbox.style.display = (cbox.style.display === 'none' || cbox.style.display === '') ? 'block' : 'none';
+  });
+</script>
   </body>
 </html>
